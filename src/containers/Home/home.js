@@ -9,7 +9,7 @@ import HeadShake from 'react-reveal/HeadShake';
 // import Carousel from '../../components/carousel/carousel'
 
 import{
-    foto1, foto2, foto3, foto4, foto5
+    foto1, foto2, foto3, foto4
 } from '../../asset'
 
 const Home = (props) => {
@@ -17,7 +17,6 @@ const Home = (props) => {
     const container = createRef();
 
     const onVideoIntersection = (entries) => {
-        debugger
         if (!entries || entries.length <= 0) {
             return;
         }
@@ -35,7 +34,6 @@ const Home = (props) => {
 
     useEffect(() => {
         if (window && 'IntersectionObserver' in window) {
-            debugger
             if (container && container.current) {
                 videoObserver.observe(container.current);
             }

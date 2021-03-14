@@ -4,7 +4,8 @@ import './AppRestricted.scss'
 import AppRouter from './AppRouter'
 
 const App = ({...props}) => {
-    const {history, location, match} = props
+    // const { history, location } = props
+    const {match} = props
     const {url} = match
     return (
         //Bikin Bentuk kaya CMS, ada topbar, sidebar, footer

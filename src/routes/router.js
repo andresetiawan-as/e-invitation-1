@@ -4,9 +4,6 @@ import { ConnectedRouter } from 'connected-react-router';
 import { connect } from 'react-redux';
 import AppRestricted from '../containers/AppRestricted/AppRestricted'
 import Home from '../containers/Home/home'
-import Landing from '../components/layout/Landing'
-import Register from '../components/auth/Register'
-import Login from '../components/auth/Login'
 import NotFound from '../containers/Page/404'
 
 const RestrictedRoutes = ({component: Component, isLoggedIn, ...rest}) => (
@@ -36,16 +33,6 @@ const PublicRouters = ({history, isLoggedIn}) => {
                         exact
                         path={`${process.env.PUBLIC_URL}/`}
                         component={Home}
-                    />
-                    <Route
-                        exact
-                        path={`${process.env.PUBLIC_URL}/register`}
-                        component={Register}
-                    />
-                    <Route
-                        exact
-                        path={`${process.env.PUBLIC_URL}/login`}
-                        component={Login}
                     />
                     <Route
                         exact

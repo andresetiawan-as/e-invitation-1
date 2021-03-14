@@ -1,14 +1,14 @@
-import { all, takeLatest, call, put, select } from "redux-saga/effects"
+import { all, takeLatest, put } from "redux-saga/effects" //, call, , select
 import * as types from "../types"
-import Config from '../../service/config'
-import Endpoint from '../../service/endpoint'
+// import Config from '../../service/config'
+// import Endpoint from '../../service/endpoint'
 
-const getStateHome = state => state.Home
+// const getStateHome = state => state.Home
 
 export function* fetchDummy(){
     try {
-        let stateHome = yield select(getStateHome)
-        // yield put({ type: types.HOME_SET_LOADER, value: true })
+        // let stateHome = yield select(getStateHome)
+        yield put({ type: types.HOME_SET_LOADER, value: true })
         // const response = yield call(GET, link, { headers: HeaderNonToken() })
     } catch (err) {
         console.log("saga > ", err);
@@ -17,6 +17,6 @@ export function* fetchDummy(){
 
 export default function* rootSaga(){
     yield all([
-        // takeLatest(types.HOME_SET_LOADER, fetchDummy)
+        takeLatest(types.HOME_SET_LOADER, fetchDummy)
     ])
 }

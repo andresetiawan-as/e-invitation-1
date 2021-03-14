@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react'
 import { Route } from 'react-router'
-import Landing from '../../components/layout/Landing'
+import NotFound from '../../containers/Page/404'
 
 const routes = [
     {
         role: ['superadmin', 'admin'],
         path: 'landing',
-        component: Landing
+        component: NotFound
     }
 ]
 

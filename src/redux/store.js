@@ -5,11 +5,10 @@ import thunk from 'redux-thunk'
 import createSagaMiddleware from 'redux-saga';
 import rootSaga from './sagas';
 import reducers from './reducers'
-// import { composeWithDevTools } from 'redux-devtools-extension';
 
-const envQA = process.env.API_ENV == 'development' || process.env.API_ENV == 'DEVELOPMENT' || process.env.API_ENV == 'QA'
-const envUTT = process.env.API_ENV == 'stagging' || process.env.API_ENV == 'UTT'
-const envPROD = process.env.API_ENV == 'production' || process.env.API_ENV == 'PROD'
+// const envQA = process.env.API_ENV === 'development' || process.env.API_ENV === 'DEVELOPMENT' || process.env.API_ENV === 'QA'
+const envUTT = process.env.API_ENV === 'stagging' || process.env.API_ENV === 'UTT'
+const envPROD = process.env.API_ENV === 'production' || process.env.API_ENV === 'PROD'
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();

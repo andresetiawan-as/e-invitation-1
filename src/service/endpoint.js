@@ -1,5 +1,3 @@
-"use strict";
-
 const Endpoint = {
     AUTHENTICATION: "oauth2/token",
     LOGOUT:

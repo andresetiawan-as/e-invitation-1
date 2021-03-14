@@ -64,8 +64,6 @@
   }
 }
 
-
-
 .couple{
   display: flex;
   justify-content: space-between;
@@ -74,7 +72,7 @@
   margin-right: 30%;
 
   .sign{
-    margin-top: 7pt;
+    padding-top: 5%;
   }
 
   .bride-groom{
@@ -104,17 +102,20 @@
     width: 80%;
 
     .sign{
+      padding-top: unset;
       text-align: center;
     }
   }
+
   .image-content-container{
     display: block;
-      .image-content{
-        position: relative;
-        background-color: grey;
-        height: 100vh;
-        width: 100%;
-        margin: 0 auto;
-      }
+
+    .image-content{
+      position: relative;
+      background-color: grey;
+      height: 100vh;
+      width: 100%;
+      margin: 0 auto;
+    }
   }
 }
